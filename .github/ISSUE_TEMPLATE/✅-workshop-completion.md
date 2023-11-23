@@ -1,7 +1,7 @@
 ---
-name: Workshop Completion - [GITHUB_USER_NAME]
+name: "✅ Workshop Completion"
 about: Submission for workshop tasks.
-title: workshop
+title: Workshop Completion - [GITHUB_USER_NAME]
 labels: ''
 assignees: zklim
 
