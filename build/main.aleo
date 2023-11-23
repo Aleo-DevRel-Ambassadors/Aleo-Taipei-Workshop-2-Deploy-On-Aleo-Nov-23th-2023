@@ -15,6 +15,17 @@ function mint:
     output r1 as Token.record;
 
 
+function mint_public:
+    input r0 as u64.private;
+    async mint_public self.caller r0 into r1;
+    output r1 as token_7090.aleo/mint_public.future;
+
+finalize mint_public:
+    input r0 as address.public;
+    input r1 as u64.public;
+    set r1 into balance[r0];
+
+
 function transfer:
     input r0 as address.private;
     input r1 as u64.private;

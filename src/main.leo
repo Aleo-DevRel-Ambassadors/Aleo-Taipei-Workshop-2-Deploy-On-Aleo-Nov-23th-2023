@@ -15,6 +15,14 @@ program token_7090.aleo {
         };
     }
 
+    transition mint_public(amount: u64) {
+        return then finalize (self.caller, amount);
+    }
+
+    finalize mint_public(caller: address, amount: u64) {
+        Mapping::set(balance, caller, amount);
+    }
+
     transition transfer(receiver: address, amount: u64, input: Token) -> (Token, Token) {
         let difference: u64 = input.balance - amount;
 
